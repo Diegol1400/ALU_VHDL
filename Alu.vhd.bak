@@ -1,0 +1,52 @@
+Library IEEE;
+use IEEE.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+entity Alu is
+port (A, B, control: in std_logic_vector(3 downto 0);
+		salida: out std_logic_vector(6 downto 0));
+end Alu;
+
+architecture behavioral of Alu is
+signal valor: std_logic_vector(3 downto 0);
+ process(A, B, Control)
+ begin 
+ case control is
+ when "0000" =>valor<=A+B;
+ when "0001" =>valor<=A-B;
+ when "0010" =>valor<=A*B;
+ when "0011" =>valor<=A/B;
+ when "0100" =>valor<=A or B;
+ when "0101" =>valor<=A and B;
+ when "0110" =>valor<=A xor B;
+ when "0111" =>valor<=A not B;
+ when "1000" =>valor<=A xnor B;
+ when "1000" =>valor<=A xnor B;
+ when "1001" =>valor<=A sll '1';
+ when "1010" =>valor<=A srl '1';
+ when "1011" =>valor<=A rol '1';
+ when "1100" =>valor<=A ror '1';
+  when others =>valor<="1111";
+ 
+	
+ 
+ end process;
+ 
+ with valor select
+	salida <= "0111111" when "0000",--0
+				"0000110" when "0001",--1
+				"1011011" when "0010",--2
+				"1001111" when "0011",--3
+				"1100110" when "0100",--4
+				"1101101" when "0101",--5
+				"1111101" when "0110",--6
+				"0000111" when "0111",--7
+				"1111111" when "1000",--8
+				"1101111" when "1001",--9
+				"0110111" when "1010", --H
+				"1001110" when "1011", --C
+				"1001111" when "1100", --E
+				"0110000" when "1101", --I
+				"0000000" when others;
+ end behavioral;

@@ -1,0 +1,62 @@
+# do Alu.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Alu
+# 
+# Top level modules:
+# 	Alu
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Alu_vlg_sample_tst
+# -- Compiling module Alu_vlg_check_tst
+# -- Compiling module Alu_vlg_vec_tst
+# 
+# Top level modules:
+# 	Alu_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.Alu_vlg_vec_tst 
+# Loading work.Alu_vlg_vec_tst
+# Loading work.Alu
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
+# Loading work.Alu_vlg_sample_tst
+# Loading work.Alu_vlg_check_tst
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# ERROR! Vector Mismatch for output port leds[0] :: @time = 100000.000 ps
+#      Expected value = 00000001
+#      Real value = 00000000
+# ERROR! Vector Mismatch for output port leds[0] :: @time = 650000.000 ps
+#      Expected value = 00001100
+#      Real value = 00000011
+# ERROR! Vector Mismatch for output port leds[1] :: @time = 650000.000 ps
+#      Expected value = 00001100
+#      Real value = 00000011
+# ERROR! Vector Mismatch for output port leds[2] :: @time = 650000.000 ps
+#      Expected value = 00001100
+#      Real value = 00000011
+# ERROR! Vector Mismatch for output port leds[3] :: @time = 650000.000 ps
+#      Expected value = 00001100
+#      Real value = 00000011
+# ERROR! Vector Mismatch for output port leds[2] :: @time = 850000.000 ps
+#      Expected value = 00010000
+#      Real value = 00000100
+# ERROR! Vector Mismatch for output port leds[4] :: @time = 850000.000 ps
+#      Expected value = 00010000
+#      Real value = 00000100
+# ERROR! Vector Mismatch for output port leds[0] :: @time = 900000.000 ps
+#      Expected value = 00010001
+#      Real value = 00000100
+# ERROR! Vector Mismatch for output port leds[1] :: @time = 950000.000 ps
+#      Expected value = 00010010
+#      Real value = 00001100
+# ERROR! Vector Mismatch for output port leds[3] :: @time = 950000.000 ps
+#      Expected value = 00010010
+#      Real value = 00001100
+#          10 mismatched vectors : Simulation failed !
+# ** Note: $finish    : Alu.vt(558)
+#    Time: 1 us  Iteration: 0  Instance: /Alu_vlg_vec_tst/tb_out
